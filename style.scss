@@ -1,15 +1,20 @@
 /* ----- file imports ----- */
-/* ----- Police import */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import "police";
+@import "color.scss";
+
 /* ----- background settings */
-body {
-  background: #EBEBEB;
-  font-family: "Open Sans", sans-serif;
+body
+{
+  background: $background;
+  font-family: $MainFont;
+
+
 }
 
 /* ----- Tim image settings */
-body > header:nth-child(1) > div.container:nth-child(1) > img:nth-child(1) {
-  border: 4px solid #CCCCCC;
+body > header:nth-child(1) > div.container:nth-child(1) > img:nth-child(1)
+{
+  border: 4px solid $grey;
   border-radius: 50%;
   display: block;
   margin-left: auto;
@@ -17,82 +22,98 @@ body > header:nth-child(1) > div.container:nth-child(1) > img:nth-child(1) {
 }
 
 /* ----- header settings */
-h1 {
-  font-size: 150%;
+
+h1
+{
+  font-size:150%;
   margin: 20px;
   font-weight: bold;
-  color: #DD5555;
+  color: $red;
   text-align: center;
 }
 
-h2 {
+h2
+{
   padding: 10px;
-  font-size: 120%;
+  font-size:120%;
   margin: 15px;
   font-weight: bold;
-  color: #9C9C9C;
+  color: $text;
   text-align: center;
 }
 
-p {
-  font-size: 110%;
+p
+{
+  font-size:110%;
   margin: 10px;
-  color: #9C9C9C;
+  color: $text;
   text-align: justify;
   line-height: 1.6;
+
 }
 
-strong {
+strong
+{
   font-weight: bold;
 }
 
-.container {
+.container
+{
   padding: 10px;
   margin-top: 25px;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
   background-color: #fff;
+
 }
 
-a {
+a
+{
   text-decoration: none;
 }
-
-.button {
+.button
+{
   border: none;
   border-radius: 10px;
-  padding: 10px;
+  padding:10px;
   margin: 10px;
-  background-color: #DD5555;
+  background-color: $red;
+&:hover
+{
+  background-color: $grey;
 }
-.button:hover {
-  background-color: #CCCCCC;
 }
 
-button a {
+button a
+{
   color: #fff;
   font-weight: bold;
 }
 
 /* ----- section settings */
-.grid {
+
+.grid
+{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
 
-ul {
-  font-size: 30px;
+ul
+{
+  font-size:30px;
   color: #CCCCCC;
 }
 
-li a {
+li a
+{
   color: #ccc;
-  font-size: 20px;
+  font-size:20px;
 }
 
-.flex {
+.flex
+{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -100,5 +121,3 @@ li a {
   align-items: stretch;
   align-content: space-between;
 }
-
-/*# sourceMappingURL=style.css.map */
